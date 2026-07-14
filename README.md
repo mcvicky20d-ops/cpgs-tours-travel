@@ -30,9 +30,15 @@ reveal, counters, WhatsApp form).
 
 ## Animations
 
-Scroll-reveal (IntersectionObserver), staggered card entrances, animated stat
-counters, hero Ken Burns zoom, destination marquee, card hover lifts and a pulsing
-WhatsApp button. All animations respect `prefers-reduced-motion`.
+Auto-rotating hero slider with dots, scroll-reveal (IntersectionObserver),
+staggered card entrances, animated stat counters, Ken Burns zoom, destination
+marquee, card hover lifts and a pulsing WhatsApp button. All animations respect
+`prefers-reduced-motion`.
+
+The layout follows a classic travel-agency structure (modelled on gtholidays.in):
+top contact bar → sticky white header with dropdown menu + "Enquire Now" CTA →
+hero slider with a quick-enquiry form → categorized package price cards →
+offer banner → why-choose-us icons → stats → testimonials → gallery → mega footer.
 
 ## SEO
 

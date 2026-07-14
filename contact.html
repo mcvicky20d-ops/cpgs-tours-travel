@@ -20,6 +20,8 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2730%27 fill=%27%230f6b57%27/%3E%3Ctext x=%2732%27 y=%2744%27 font-size=%2736%27 font-family=%27Arial%27 font-weight=%27bold%27 fill=%27%23e0a935%27 text-anchor=%27middle%27%3EC%3C/text%3E%3C/svg%3E" />
     <link rel="stylesheet" href="styles.css" />
 
@@ -83,25 +85,49 @@
     </script>
   </head>
   <body>
-    <header class="site-header" data-header>
-      <a class="brand" href="index.html" aria-label="CPGS Tours and Travels home">
-        <span class="brand-mark">C</span>
-        <span>
-          <strong>CPGS</strong>
-          <small>Tours &amp; Travels</small>
-        </span>
-      </a>
-      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="main-nav" data-nav>
-        <a href="index.html">Home</a>
-        <a href="packages.html">Tour Packages</a>
-        <a href="destinations.html">Destinations</a>
-        <a href="fleet.html">Fleet &amp; Tariff</a>
-        <a href="about.html">About</a>
-        <a class="nav-cta" href="contact.html">Book Now</a>
-      </nav>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <div class="topbar-group">
+          <a href="tel:+919487411599">📞 +91 94874 11599</a>
+          <a class="wa-link" href="https://wa.me/919487411599" target="_blank" rel="noopener">🟢 WhatsApp us — quick reply</a>
+        </div>
+        <div class="topbar-group secondary">
+          <a href="mailto:cpgstoursandtravels24@gmail.com">✉️ cpgstoursandtravels24@gmail.com</a>
+          <span>🕐 Open 24×7 for bookings</span>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="CPGS Tours and Travels home">
+          <span class="brand-mark">C</span>
+          <span>
+            <strong>CPGS</strong>
+            <small>Tours &amp; Travels</small>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" data-nav>
+          <a href="index.html">Home</a>
+          <div class="nav-item">
+            <a href="packages.html">Tour Packages <span class="caret">▾</span></a>
+            <div class="dropdown">
+              <a href="packages.html#temple">🛕 Temple Tour Packages</a>
+              <a href="packages.html#hills">⛰️ Hill Station Packages</a>
+              <a href="packages.html#kerala">🌴 Kerala Specials</a>
+              <a href="packages.html#daily">🚕 Day Trips &amp; Transfers</a>
+            </div>
+          </div>
+          <a href="destinations.html">Destinations</a>
+          <a href="fleet.html">Fleet &amp; Tariff</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a class="nav-cta" href="contact.html#booking">Enquire Now</a>
+        </nav>
+      </div>
     </header>
 
     <main>
@@ -113,8 +139,11 @@
           aria-label="Traveller looking over a scenic coastal road"
         ></div>
         <div class="page-hero-overlay"></div>
-        <div class="page-hero-content">
-          <p class="eyebrow">Contact &amp; booking</p>
+        <div class="container page-hero-content">
+          <ul class="breadcrumbs">
+            <li><a href="index.html">Home</a></li>
+            <li>Contact &amp; Booking</li>
+          </ul>
           <h1>Tell us where you want to go</h1>
           <p>
             Fill the form and your trip details open directly in WhatsApp — or call us any time.
@@ -123,7 +152,7 @@
         </div>
       </section>
 
-      <section class="contact" id="booking">
+      <section class="section"><div class="container contact" id="booking">
         <div class="contact-copy reveal">
           <p class="eyebrow">Start your booking</p>
           <h2>Reach us directly</h2>
@@ -145,7 +174,7 @@
           </div>
         </div>
 
-        <form class="booking-form reveal" data-booking-form>
+        <form class="booking-form reveal" data-wa-form>
           <div class="form-row">
             <label>
               Name
@@ -195,9 +224,11 @@
           </p>
           <p class="form-status" role="status" data-form-status></p>
         </form>
+        </div>
       </section>
 
-      <section class="section service">
+      <section class="section alt">
+        <div class="container">
         <div class="section-heading reveal">
           <p class="eyebrow">FAQ</p>
           <h2>Common questions, answered</h2>
@@ -241,58 +272,68 @@
             </p>
           </details>
         </div>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a class="brand" href="index.html">
-            <span class="brand-mark">C</span>
-            <span>
-              <strong>CPGS</strong>
-              <small>Tours &amp; Travels</small>
-            </span>
-          </a>
-          <p>
-            Local rides, tour packages, airport transfers, and group travel across Tamil Nadu,
-            Kerala and South India.
-          </p>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="index.html">
+              <span class="brand-mark">C</span>
+              <span>
+                <strong>CPGS</strong>
+                <small>Tours &amp; Travels</small>
+              </span>
+            </a>
+            <p>
+              Local rides, tour packages, airport transfers, and group travel across Tamil Nadu,
+              Kerala and South India.
+            </p>
+            <div class="footer-social">
+              <a href="https://wa.me/919487411599" target="_blank" rel="noopener" aria-label="WhatsApp">
+                <svg viewBox="0 0 32 32" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M16 3.2C8.94 3.2 3.2 8.94 3.2 16c0 2.26.59 4.46 1.71 6.4L3.2 28.8l6.59-1.73A12.74 12.74 0 0 0 16 28.65c7.06 0 12.8-5.74 12.8-12.8S23.06 3.2 16 3.2z"/></svg>
+              </a>
+              <a href="tel:+919487411599" aria-label="Call CPGS">📞</a>
+              <a href="mailto:cpgstoursandtravels24@gmail.com" aria-label="Email CPGS">✉️</a>
+            </div>
+          </div>
+          <div>
+            <h3>Quick links</h3>
+            <ul>
+              <li><a href="packages.html">Tour Packages</a></li>
+              <li><a href="destinations.html">Destinations</a></li>
+              <li><a href="fleet.html">Fleet &amp; Tariff</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact &amp; Booking</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Popular trips</h3>
+            <ul>
+              <li><a href="packages.html#temple">Temple tour packages</a></li>
+              <li><a href="packages.html#hills">Kodaikanal &amp; Ooty trips</a></li>
+              <li><a href="packages.html#kerala">Kerala backwaters tour</a></li>
+              <li><a href="packages.html#daily">Airport transfers</a></li>
+              <li><a href="packages.html#daily">Corporate travel</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Contact</h3>
+            <ul>
+              <li><a href="tel:+919487411599">+91 94874 11599</a></li>
+              <li><a href="tel:+919486365972">+91 94863 65972</a></li>
+              <li><a href="tel:+919443425972">+91 94434 25972</a></li>
+              <li><a href="mailto:cpgstoursandtravels24@gmail.com">cpgstoursandtravels24@gmail.com</a></li>
+              <li><a href="https://wa.me/919487411599" target="_blank" rel="noopener">WhatsApp us</a></li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <h3>Quick links</h3>
-          <ul>
-            <li><a href="packages.html">Tour Packages</a></li>
-            <li><a href="destinations.html">Destinations</a></li>
-            <li><a href="fleet.html">Fleet &amp; Tariff</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact &amp; Booking</a></li>
-          </ul>
+        <div class="footer-bottom">
+          <p>© 2026 CPGS Tours &amp; Travels. All rights reserved.</p>
+          <p>Comfortable travel across South India · Cash / UPI / GPay accepted</p>
         </div>
-        <div>
-          <h3>Popular trips</h3>
-          <ul>
-            <li><a href="packages.html">Temple tour packages</a></li>
-            <li><a href="packages.html">Kodaikanal &amp; Ooty trips</a></li>
-            <li><a href="packages.html">Kerala backwaters tour</a></li>
-            <li><a href="packages.html">Airport transfers</a></li>
-            <li><a href="packages.html">Corporate travel</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Contact</h3>
-          <ul>
-            <li><a href="tel:+919487411599">+91 94874 11599</a></li>
-            <li><a href="tel:+919486365972">+91 94863 65972</a></li>
-            <li><a href="tel:+919443425972">+91 94434 25972</a></li>
-            <li><a href="mailto:cpgstoursandtravels24@gmail.com">cpgstoursandtravels24@gmail.com</a></li>
-            <li><a href="https://wa.me/919487411599" target="_blank" rel="noopener">WhatsApp us</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 CPGS Tours &amp; Travels. All rights reserved.</p>
-        <p>Comfortable travel across South India.</p>
       </div>
     </footer>
 

@@ -24,6 +24,8 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2730%27 fill=%27%230f6b57%27/%3E%3Ctext x=%2732%27 y=%2744%27 font-size=%2736%27 font-family=%27Arial%27 font-weight=%27bold%27 fill=%27%23e0a935%27 text-anchor=%27middle%27%3EC%3C/text%3E%3C/svg%3E" />
     <link rel="stylesheet" href="styles.css" />
 
@@ -52,39 +54,61 @@
     </script>
   </head>
   <body>
-    <header class="site-header" data-header>
-      <a class="brand" href="index.html" aria-label="CPGS Tours and Travels home">
-        <span class="brand-mark">C</span>
-        <span>
-          <strong>CPGS</strong>
-          <small>Tours &amp; Travels</small>
-        </span>
-      </a>
-      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="main-nav" data-nav>
-        <a href="index.html">Home</a>
-        <a href="packages.html">Tour Packages</a>
-        <a href="destinations.html">Destinations</a>
-        <a href="fleet.html">Fleet &amp; Tariff</a>
-        <a href="about.html">About</a>
-        <a class="nav-cta" href="contact.html">Book Now</a>
-      </nav>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <div class="topbar-group">
+          <a href="tel:+919487411599">📞 +91 94874 11599</a>
+          <a class="wa-link" href="https://wa.me/919487411599" target="_blank" rel="noopener">🟢 WhatsApp us — quick reply</a>
+        </div>
+        <div class="topbar-group secondary">
+          <a href="mailto:cpgstoursandtravels24@gmail.com">✉️ cpgstoursandtravels24@gmail.com</a>
+          <span>🕐 Open 24×7 for bookings</span>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="CPGS Tours and Travels home">
+          <span class="brand-mark">C</span>
+          <span>
+            <strong>CPGS</strong>
+            <small>Tours &amp; Travels</small>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" data-nav>
+          <a href="index.html">Home</a>
+          <div class="nav-item">
+            <a href="packages.html">Tour Packages <span class="caret">▾</span></a>
+            <div class="dropdown">
+              <a href="#temple">🛕 Temple Tour Packages</a>
+              <a href="#hills">⛰️ Hill Station Packages</a>
+              <a href="#kerala">🌴 Kerala Specials</a>
+              <a href="#daily">🚕 Day Trips &amp; Transfers</a>
+            </div>
+          </div>
+          <a href="destinations.html">Destinations</a>
+          <a href="fleet.html">Fleet &amp; Tariff</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a class="nav-cta" href="contact.html#booking">Enquire Now</a>
+        </nav>
+      </div>
     </header>
 
     <main>
       <section class="page-hero">
-        <div
-          class="page-hero-media"
-          style="background-image: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1800&q=80')"
-          role="img"
-          aria-label="South Indian temple gopuram at golden hour"
-        ></div>
+        <div class="page-hero-media" style="background-image: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1800&q=80')" role="img" aria-label="South Indian temple gopuram at golden hour"></div>
         <div class="page-hero-overlay"></div>
-        <div class="page-hero-content">
-          <p class="eyebrow">Tour packages</p>
-          <h1>Trips planned around you</h1>
+        <div class="container">
+          <ul class="breadcrumbs">
+            <li><a href="index.html">Home</a></li>
+            <li>Tour Packages</li>
+          </ul>
+          <h1>Tour Packages</h1>
           <p>
             Every package below is a starting point — routes, stops, hotels and timing are customized
             to your group. Send one WhatsApp message to get a clear quote.
@@ -92,297 +116,466 @@
         </div>
       </section>
 
-      <section class="section">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Devotional &amp; multi-day</p>
-          <h2>Signature South India tours</h2>
-          <p class="lede">
-            Our most requested routes with experienced drivers who know temple timings, ghat roads
-            and the best food stops on the way.
+      <section class="section" id="temple" aria-label="Temple tour packages">
+        <div class="container">
+          <div class="heading-row reveal">
+            <div class="section-heading">
+              <p class="eyebrow">Devotional journeys</p>
+              <h2>🛕 Temple Tour Packages</h2>
+            </div>
+          </div>
+          <div class="tour-grid" data-stagger>
+            <article class="tour-card">
+              <div class="tour-media">
+                <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=900&q=80" alt="Meenakshi Amman Temple, Madurai" loading="lazy" />
+                <span class="tour-duration">3 Days / 2 Nights</span>
+                <span class="tour-tag">Best Seller</span>
+              </div>
+              <div class="tour-body">
+                <h3>Madurai – Rameswaram – Kanyakumari</h3>
+                <p class="tour-route">Meenakshi Temple → Ramanathaswamy → Dhanushkodi → Sunrise Point</p>
+                <div class="tour-rating"><span class="stars">★★★★★</span> 4.9 · 210 trips</div>
+                <ul class="tour-inclusions">
+                  <li>🚗 Private cab</li>
+                  <li>🛕 Darshan planning</li>
+                  <li>🏨 Hotel assistance</li>
+                  <li>👨‍✈️ Expert driver</li>
+                </ul>
+                <div class="tour-foot">
+                  <div class="tour-pricing">
+                    <small>Starting from</small>
+                    <strong>₹18,500</strong>
+                    <span>per trip (sedan)*</span>
+                  </div>
+                  <a class="button whatsapp small" target="_blank" rel="noopener"
+                    href="https://wa.me/919487411599?text=Hello%20CPGS!%20I%27m%20interested%20in%20the%20*Madurai%20-%20Rameswaram%20-%20Kanyakumari%203-day%20Temple%20Trail*.%20Please%20share%20the%20itinerary%20and%20quote."
+                  >Enquire Now</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="tour-card">
+              <div class="tour-media">
+                <img src="https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=900&q=80" alt="Navagraha temple architecture near Kumbakonam" loading="lazy" />
+                <span class="tour-duration">2–3 Days</span>
+              </div>
+              <div class="tour-body">
+                <h3>Navagraha Temple Circuit</h3>
+                <p class="tour-route">All nine Navagraha temples around the Kumbakonam belt</p>
+                <div class="tour-rating"><span class="stars">★★★★★</span> 4.8 · 95 trips</div>
+                <ul class="tour-inclusions">
+                  <li>🚗 Private cab</li>
+                  <li>🛕 Right darshan order</li>
+                  <li>🌅 Early starts planned</li>
+                  <li>👵 Senior friendly</li>
+                </ul>
+                <div class="tour-foot">
+                  <div class="tour-pricing">
+                    <small>Starting from</small>
+                    <strong>₹14,500</strong>
+                    <span>per trip (sedan)*</span>
+                  </div>
+                  <a class="button whatsapp small" target="_blank" rel="noopener"
+                    href="https://wa.me/919487411599?text=Hello%20CPGS!%20I%27m%20interested%20in%20the%20*Navagraha%20Temple%20Circuit*.%20Please%20share%20the%20itinerary%20and%20quote."
+                  >Enquire Now</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="tour-card">
+              <div class="tour-media">
+                <img src="https://images.unsplash.com/photo-1604693433772-7e0ee5cef9e9?auto=format&fit=crop&w=900&q=80" alt="Palani hill temple" loading="lazy" />
+                <span class="tour-duration">1–2 Days</span>
+              </div>
+              <div class="tour-body">
+                <h3>Palani – Tiruchendur Murugan Yatra</h3>
+                <p class="tour-route">Two Arupadai Veedu shrines in one comfortable circuit</p>
+                <div class="tour-rating"><span class="stars">★★★★★</span> 4.9 · 140 trips</div>
+                <ul class="tour-inclusions">
+                  <li>🚗 Private cab</li>
+                  <li>🛕 Queue guidance</li>
+                  <li>🍛 Food stop picks</li>
+                  <li>👨‍✈️ Expert driver</li>
+                </ul>
+                <div class="tour-foot">
+                  <div class="tour-pricing">
+                    <small>Starting from</small>
+                    <strong>₹9,500</strong>
+                    <span>per trip (sedan)*</span>
+                  </div>
+                  <a class="button whatsapp small" target="_blank" rel="noopener"
+                    href="https://wa.me/919487411599?text=Hello%20CPGS!%20I%27m%20interested%20in%20the%20*Palani%20-%20Tiruchendur%20Murugan%20Yatra*.%20Please%20share%20the%20itinerary%20and%20quote."
+                  >Enquire Now</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="hills" aria-label="Hill station packages">
+        <div class="container">
+          <div class="heading-row reveal">
+            <div class="section-heading">
+              <p class="eyebrow">Cool escapes</p>
+              <h2>⛰️ Hill Station Packages</h2>
+            </div>
+          </div>
+          <div class="tour-grid" data-stagger>
+            <article class="tour-card">
+              <div class="tour-media">
+                <img src="https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=900&q=80" alt="Misty valley viewpoint in Kodaikanal" loading="lazy" />
+                <span class="tour-duration">2 Days / 1 Night</span>
+                <span class="tour-tag">Family Favourite</span>
+              </div>
+              <div class="tour-body">
+                <h3>Kodaikanal Hill Escape</h3>
+                <p class="tour-route">Kodai Lake → Coaker's Walk → Pillar Rocks → Pine Forest</p>
+                <div class="tour-rating"><span class="stars">★★★★★</span> 4.8 · 160 trips</div>
+                <ul class="tour-inclusions">
+                  <li>🚗 Private cab</li>
+                  <li>⛰️ Ghat-road expert</li>
+                  <li>📍 All viewpoints</li>
+                  <li>🏨 Hotel assistance</li>
+                </ul>
+                <div class="tour-foot">
+                  <div class="tour-pricing">
+                    <small>Starting from</small>
+                    <strong>₹12,000</strong>
+                    <span>per trip (sedan)*</span>
+                  </div>
+                  <a class="button whatsapp small" target="_blank" rel="noopener"
+                    href="https://wa.me/919487411599?text=Hello%20CPGS!%20I%27m%20interested%20in%20the%20*Kodaikanal%202-day%20Hill%20Escape*.%20Please%20share%20the%20itinerary%20and%20quote."
+                  >Enquire Now</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="tour-card">
+              <div class="tour-media">
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=900&q=80" alt="Nilgiri tea gardens near Ooty" loading="lazy" />
+                <span class="tour-duration">3 Days / 2 Nights</span>
+              </div>
+              <div class="tour-body">
+                <h3>Ooty &amp; Coonoor Nilgiris Tour</h3>
+                <p class="tour-route">Botanical Gardens → Ooty Lake → Doddabetta → Coonoor tea route</p>
+                <div class="tour-rating"><span class="stars">★★★★★</span> 4.8 · 130 trips</div>
+                <ul class="tour-inclusions">
+                  <li>🚗 Private cab</li>
+                  <li>🚂 Toy train help</li>
+                  <li>🌿 Garden circuit</li>
+                  <li>🏨 Hotel assistance</li>
+                </ul>
+                <div class="tour-foot">
+                  <div class="tour-pricing">
+                    <small>Starting from</small>
+                    <strong>₹16,500</strong>
+                    <span>per trip (sedan)*</span>
+                  </div>
+                  <a class="button whatsapp small" target="_blank" rel="noopener"
+                    href="https://wa.me/919487411599?text=Hello%20CPGS!%20I%27m%20interested%20in%20the%20*Ooty%20%26%20Coonoor%203-day%20tour*.%20Please%20share%20the%20itinerary%20and%20quote."
+                  >Enquire Now</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="tour-card">
+              <div class="tour-media">
+                <img src="https://images.unsplash.com/photo-1580058572462-98e2c0e0e2f0?auto=format&fit=crop&w=900&q=80" alt="Coffee estates of Coorg" loading="lazy" />
+                <span class="tour-duration">3–4 Days</span>
+              </div>
+              <div class="tour-body">
+                <h3>Coorg &amp; Mysore Circuit</h3>
+                <p class="tour-route">Abbey Falls → coffee estates → Mysore Palace → Chamundi Hills</p>
+                <div class="tour-rating"><span class="stars">★★★★☆</span> 4.7 · 80 trips</div>
+                <ul class="tour-inclusions">
+                  <li>🚗 Private cab</li>
+                  <li>🛂 Interstate permits</li>
+                  <li>☕ Estate visits</li>
+                  <li>🏨 Hotel assistance</li>
+                </ul>
+                <div class="tour-foot">
+                  <div class="tour-pricing">
+                    <small>Starting from</small>
+                    <strong>₹19,500</strong>
+                    <span>per trip (sedan)*</span>
+                  </div>
+                  <a class="button whatsapp small" target="_blank" rel="noopener"
+                    href="https://wa.me/919487411599?text=Hello%20CPGS!%20I%27m%20interested%20in%20the%20*Coorg%20%26%20Mysore%20Circuit*.%20Please%20share%20the%20itinerary%20and%20quote."
+                  >Enquire Now</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="kerala" aria-label="Kerala packages">
+        <div class="container">
+          <div class="heading-row reveal">
+            <div class="section-heading">
+              <p class="eyebrow">God's own country</p>
+              <h2>🌴 Kerala Specials</h2>
+            </div>
+          </div>
+          <div class="tour-grid" data-stagger>
+            <article class="tour-card">
+              <div class="tour-media">
+                <img src="https://images.unsplash.com/photo-1637066742971-726bee8d9f56?auto=format&fit=crop&w=900&q=80" alt="Munnar tea plantations" loading="lazy" />
+                <span class="tour-duration">4 Days / 3 Nights</span>
+                <span class="tour-tag">Honeymoon Pick</span>
+              </div>
+              <div class="tour-body">
+                <h3>Munnar &amp; Alleppey Backwaters</h3>
+                <p class="tour-route">Tea estates → Eravikulam → Mattupetty → houseboat stay</p>
+                <div class="tour-rating"><span class="stars">★★★★★</span> 4.9 · 120 trips</div>
+                <ul class="tour-inclusions">
+                  <li>🚗 Private cab</li>
+                  <li>🛶 Houseboat help</li>
+                  <li>🍃 Tea estate visits</li>
+                  <li>🛂 Permits handled</li>
+                </ul>
+                <div class="tour-foot">
+                  <div class="tour-pricing">
+                    <small>Starting from</small>
+                    <strong>₹24,000</strong>
+                    <span>per trip (sedan)*</span>
+                  </div>
+                  <a class="button whatsapp small" target="_blank" rel="noopener"
+                    href="https://wa.me/919487411599?text=Hello%20CPGS!%20I%27m%20interested%20in%20the%20*Munnar%20%26%20Alleppey%204-day%20tour*.%20Please%20share%20the%20itinerary%20and%20quote."
+                  >Enquire Now</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="tour-card">
+              <div class="tour-media">
+                <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=80" alt="Alleppey houseboat" loading="lazy" />
+                <span class="tour-duration">2 Days / 1 Night</span>
+              </div>
+              <div class="tour-body">
+                <h3>Alleppey Houseboat Weekend</h3>
+                <p class="tour-route">Backwater canals → village life → sunset cruise</p>
+                <div class="tour-rating"><span class="stars">★★★★★</span> 4.8 · 90 trips</div>
+                <ul class="tour-inclusions">
+                  <li>🚗 Pickup &amp; drop</li>
+                  <li>🛶 Houseboat booking</li>
+                  <li>🍤 Kerala meals</li>
+                  <li>📸 Photo stops</li>
+                </ul>
+                <div class="tour-foot">
+                  <div class="tour-pricing">
+                    <small>Starting from</small>
+                    <strong>₹15,500</strong>
+                    <span>per trip (sedan)*</span>
+                  </div>
+                  <a class="button whatsapp small" target="_blank" rel="noopener"
+                    href="https://wa.me/919487411599?text=Hello%20CPGS!%20I%27m%20interested%20in%20the%20*Alleppey%20Houseboat%20Weekend*.%20Please%20share%20the%20itinerary%20and%20quote."
+                  >Enquire Now</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="tour-card">
+              <div class="tour-media">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=900&q=80" alt="South India mountain sunrise" loading="lazy" />
+                <span class="tour-duration">5–7 Days</span>
+                <span class="tour-tag">Fully Custom</span>
+              </div>
+              <div class="tour-body">
+                <h3>South India Grand Tour</h3>
+                <p class="tour-route">Temples + hills + backwaters — built around your dates</p>
+                <div class="tour-rating"><span class="stars">★★★★★</span> 4.9 · 70 trips</div>
+                <ul class="tour-inclusions">
+                  <li>🗺️ Custom route</li>
+                  <li>🏨 Hotels per budget</li>
+                  <li>👨‍✈️ One driver, whole trip</li>
+                  <li>🛂 All permits</li>
+                </ul>
+                <div class="tour-foot">
+                  <div class="tour-pricing">
+                    <small>Pricing</small>
+                    <strong>Custom</strong>
+                    <span>quote on WhatsApp</span>
+                  </div>
+                  <a class="button whatsapp small" target="_blank" rel="noopener"
+                    href="https://wa.me/919487411599?text=Hello%20CPGS!%20I%27d%20like%20to%20plan%20a%20*South%20India%20Grand%20Tour*.%20Here%20are%20my%20dates%20and%20group%20size%3A"
+                  >Plan My Tour</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="daily" aria-label="Day trips and transfers">
+        <div class="container">
+          <div class="heading-row reveal">
+            <div class="section-heading">
+              <p class="eyebrow">Daily &amp; on-demand</p>
+              <h2>🚕 Day Trips &amp; Transfers</h2>
+            </div>
+          </div>
+          <div class="tour-grid" data-stagger>
+            <article class="tour-card">
+              <div class="tour-media">
+                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&q=80" alt="Sedan taxi for local trips" loading="lazy" />
+                <span class="tour-duration">8 hrs / 80 km</span>
+              </div>
+              <div class="tour-body">
+                <h3>One Day Local Package</h3>
+                <p class="tour-route">City sightseeing · shopping · functions · meetings</p>
+                <div class="tour-rating"><span class="stars">★★★★★</span> 4.9 · 400+ trips</div>
+                <ul class="tour-inclusions">
+                  <li>🚗 Hatchback / sedan / SUV</li>
+                  <li>⏰ Flexible start</li>
+                  <li>👨‍✈️ Local driver</li>
+                </ul>
+                <div class="tour-foot">
+                  <div class="tour-pricing">
+                    <small>Starting from</small>
+                    <strong>₹2,500</strong>
+                    <span>per day*</span>
+                  </div>
+                  <a class="button whatsapp small" target="_blank" rel="noopener"
+                    href="https://wa.me/919487411599?text=Hello%20CPGS!%20I%20need%20a%20*One%20Day%20Local*%20cab.%20Please%20share%20availability%20and%20rate."
+                  >Enquire Now</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="tour-card">
+              <div class="tour-media">
+                <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=900&q=80" alt="Car on highway at dusk for airport transfer" loading="lazy" />
+                <span class="tour-duration">One way</span>
+              </div>
+              <div class="tour-body">
+                <h3>Airport &amp; Railway Transfers</h3>
+                <p class="tour-route">On-time pickups and drops — day or night</p>
+                <div class="tour-rating"><span class="stars">★★★★★</span> 4.9 · 600+ trips</div>
+                <ul class="tour-inclusions">
+                  <li>✈️ Flight tracking</li>
+                  <li>🌙 24×7 service</li>
+                  <li>🧳 Luggage friendly</li>
+                </ul>
+                <div class="tour-foot">
+                  <div class="tour-pricing">
+                    <small>Starting from</small>
+                    <strong>₹1,200</strong>
+                    <span>one way*</span>
+                  </div>
+                  <a class="button whatsapp small" target="_blank" rel="noopener"
+                    href="https://wa.me/919487411599?text=Hello%20CPGS!%20I%20need%20an%20*Airport%2FRailway%20Transfer*.%20Here%20are%20my%20pickup%20details%3A"
+                  >Enquire Now</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="tour-card">
+              <div class="tour-media">
+                <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=900&q=80" alt="SUV for corporate travel" loading="lazy" />
+                <span class="tour-duration">Monthly</span>
+              </div>
+              <div class="tour-body">
+                <h3>Corporate Travel</h3>
+                <p class="tour-route">Employee transport · client pickups · site visits</p>
+                <div class="tour-rating"><span class="stars">★★★★★</span> 4.8 · 15+ companies</div>
+                <ul class="tour-inclusions">
+                  <li>📅 Scheduled rides</li>
+                  <li>🧾 Billing records</li>
+                  <li>⚡ Priority support</li>
+                </ul>
+                <div class="tour-foot">
+                  <div class="tour-pricing">
+                    <small>Pricing</small>
+                    <strong>Custom</strong>
+                    <span>monthly quote</span>
+                  </div>
+                  <a class="button whatsapp small" target="_blank" rel="noopener"
+                    href="https://wa.me/919487411599?text=Hello%20CPGS!%20We%27re%20interested%20in%20*Corporate%20Travel*%20service%20for%20our%20company.%20Please%20get%20in%20touch."
+                  >Enquire Now</a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <p class="tariff-note reveal">
+            *Prices are indicative starting rates for a sedan and vary with season, route, vehicle and
+            group size. You always receive a clear final quote on WhatsApp before confirming.
           </p>
-        </div>
-        <div class="package-grid" data-stagger>
-          <article class="package-card featured">
-            <div class="package-top">
-              <h3>Madurai – Rameswaram – Kanyakumari</h3>
-              <span>3 days</span>
-            </div>
-            <p>
-              The classic Tamil Nadu temple trail: Meenakshi Amman Temple, Ramanathaswamy Temple,
-              Dhanushkodi, and sunrise at Kanyakumari.
-            </p>
-            <ul>
-              <li>Temple darshan timing planned</li>
-              <li>Hotel pickup and drop daily</li>
-              <li>Sedan, SUV or tempo traveller</li>
-            </ul>
-            <p class="package-price">Starting from ₹18,500 (sedan, all-inclusive)*</p>
-            <div class="card-actions">
-              <a class="button whatsapp" target="_blank" rel="noopener"
-                href="https://wa.me/919487411599?text=Hello%20CPGS!%20I%27m%20interested%20in%20the%20*Madurai%20-%20Rameswaram%20-%20Kanyakumari%203-day%20Temple%20Trail*.%20Please%20share%20the%20itinerary%20and%20quote."
-              >Book on WhatsApp</a>
-            </div>
-          </article>
-
-          <article class="package-card">
-            <div class="package-top">
-              <h3>Kodaikanal Hill Escape</h3>
-              <span>2 days</span>
-            </div>
-            <p>
-              Kodai Lake, Coaker's Walk, Pillar Rocks, Pine Forest and Silver Cascade falls with a
-              driver experienced on ghat roads.
-            </p>
-            <ul>
-              <li>Safe hill driving, flexible stops</li>
-              <li>Boating and viewpoint time built in</li>
-              <li>Great for couples and families</li>
-            </ul>
-            <p class="package-price">Starting from ₹12,000 (sedan)*</p>
-            <div class="card-actions">
-              <a class="button whatsapp" target="_blank" rel="noopener"
-                href="https://wa.me/919487411599?text=Hello%20CPGS!%20I%27m%20interested%20in%20the%20*Kodaikanal%202-day%20Hill%20Escape*.%20Please%20share%20the%20itinerary%20and%20quote."
-              >Book on WhatsApp</a>
-            </div>
-          </article>
-
-          <article class="package-card">
-            <div class="package-top">
-              <h3>Munnar &amp; Kerala Backwaters</h3>
-              <span>4 days</span>
-            </div>
-            <p>
-              Tea estates and misty viewpoints in Munnar, then unwind on the Alleppey backwaters with
-              optional houseboat stay.
-            </p>
-            <ul>
-              <li>Munnar, Eravikulam, Mattupetty</li>
-              <li>Alleppey houseboat assistance</li>
-              <li>Interstate permits handled</li>
-            </ul>
-            <p class="package-price">Starting from ₹24,000 (sedan)*</p>
-            <div class="card-actions">
-              <a class="button whatsapp" target="_blank" rel="noopener"
-                href="https://wa.me/919487411599?text=Hello%20CPGS!%20I%27m%20interested%20in%20the%20*Munnar%20%26%20Kerala%20Backwaters%204-day%20tour*.%20Please%20share%20the%20itinerary%20and%20quote."
-              >Book on WhatsApp</a>
-            </div>
-          </article>
-
-          <article class="package-card">
-            <div class="package-top">
-              <h3>Ooty &amp; Coonoor</h3>
-              <span>3 days</span>
-            </div>
-            <p>
-              Botanical Gardens, Ooty Lake, Doddabetta Peak, Coonoor tea gardens and the scenic
-              Nilgiris drive.
-            </p>
-            <ul>
-              <li>Nilgiri viewpoints and gardens</li>
-              <li>Toy train assistance on request</li>
-              <li>Family-friendly pacing</li>
-            </ul>
-            <p class="package-price">Starting from ₹16,500 (sedan)*</p>
-            <div class="card-actions">
-              <a class="button whatsapp" target="_blank" rel="noopener"
-                href="https://wa.me/919487411599?text=Hello%20CPGS!%20I%27m%20interested%20in%20the%20*Ooty%20%26%20Coonoor%203-day%20tour*.%20Please%20share%20the%20itinerary%20and%20quote."
-              >Book on WhatsApp</a>
-            </div>
-          </article>
-
-          <article class="package-card">
-            <div class="package-top">
-              <h3>Navagraha Temple Tour</h3>
-              <span>2–3 days</span>
-            </div>
-            <p>
-              Visit the nine Navagraha temples around the Kumbakonam belt with darshan timing planned
-              in the right order.
-            </p>
-            <ul>
-              <li>All nine temples covered</li>
-              <li>Early morning darshan planning</li>
-              <li>Senior-citizen friendly pace</li>
-            </ul>
-            <p class="package-price">Starting from ₹14,500 (sedan)*</p>
-            <div class="card-actions">
-              <a class="button whatsapp" target="_blank" rel="noopener"
-                href="https://wa.me/919487411599?text=Hello%20CPGS!%20I%27m%20interested%20in%20the%20*Navagraha%20Temple%20Tour*.%20Please%20share%20the%20itinerary%20and%20quote."
-              >Book on WhatsApp</a>
-            </div>
-          </article>
-
-          <article class="package-card">
-            <div class="package-top">
-              <h3>South India Grand Tour</h3>
-              <span>5–7 days</span>
-            </div>
-            <p>
-              A custom multi-state itinerary combining temples, hills, backwaters and coastal towns —
-              built around your dates and interests.
-            </p>
-            <ul>
-              <li>Fully custom route planning</li>
-              <li>Hotel suggestions per budget</li>
-              <li>One driver for the whole trip</li>
-            </ul>
-            <p class="package-price">Custom quote on WhatsApp</p>
-            <div class="card-actions">
-              <a class="button whatsapp" target="_blank" rel="noopener"
-                href="https://wa.me/919487411599?text=Hello%20CPGS!%20I%27d%20like%20to%20plan%20a%20*South%20India%20Grand%20Tour*.%20Here%20are%20my%20dates%20and%20group%20size%3A"
-              >Plan on WhatsApp</a>
-            </div>
-          </article>
-        </div>
-        <p class="tariff-note reveal">
-          *Prices are indicative starting rates for a sedan and vary with season, route, vehicle and
-          group size. You always receive a clear final quote on WhatsApp before confirming.
-        </p>
-      </section>
-
-      <section class="section service">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Daily &amp; on-demand</p>
-          <h2>Short trips and regular rides</h2>
-        </div>
-        <div class="package-grid" data-stagger>
-          <article class="package-card">
-            <div class="package-top">
-              <h3>One Day Local</h3>
-              <span>8 hrs / 80 km</span>
-            </div>
-            <p>City sightseeing, shopping, family functions, hospital visits and business meetings.</p>
-            <ul>
-              <li>Hatchback, sedan or SUV</li>
-              <li>Flexible start time</li>
-            </ul>
-            <p class="package-price">Starting from ₹2,500*</p>
-            <div class="card-actions">
-              <a class="button whatsapp" target="_blank" rel="noopener"
-                href="https://wa.me/919487411599?text=Hello%20CPGS!%20I%20need%20a%20*One%20Day%20Local*%20cab.%20Please%20share%20availability%20and%20rate."
-              >Book on WhatsApp</a>
-            </div>
-          </article>
-          <article class="package-card">
-            <div class="package-top">
-              <h3>Airport &amp; Railway Transfer</h3>
-              <span>One way</span>
-            </div>
-            <p>On-time pickups and drops for airports and railway stations, day or night.</p>
-            <ul>
-              <li>Flight tracking on request</li>
-              <li>Clean car, courteous driver</li>
-            </ul>
-            <p class="package-price">Starting from ₹1,200*</p>
-            <div class="card-actions">
-              <a class="button whatsapp" target="_blank" rel="noopener"
-                href="https://wa.me/919487411599?text=Hello%20CPGS!%20I%20need%20an%20*Airport%2FRailway%20Transfer*.%20Here%20are%20my%20pickup%20details%3A"
-              >Book on WhatsApp</a>
-            </div>
-          </article>
-          <article class="package-card">
-            <div class="package-top">
-              <h3>Corporate Travel</h3>
-              <span>Monthly</span>
-            </div>
-            <p>Employee transport, client pickups and executive travel with billing-friendly records.</p>
-            <ul>
-              <li>Scheduled recurring rides</li>
-              <li>Priority coordination</li>
-            </ul>
-            <p class="package-price">Custom monthly quote</p>
-            <div class="card-actions">
-              <a class="button whatsapp" target="_blank" rel="noopener"
-                href="https://wa.me/919487411599?text=Hello%20CPGS!%20We%27re%20interested%20in%20*Corporate%20Travel*%20service%20for%20our%20company.%20Please%20get%20in%20touch."
-              >Enquire on WhatsApp</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-heading reveal">
-          <p class="eyebrow">How it works</p>
-          <h2>Booking takes three simple steps</h2>
-        </div>
-        <div class="steps" data-stagger>
-          <div class="step">
-            <h3>Message us on WhatsApp</h3>
-            <p>Send your route, dates, pickup point and number of travellers — or use the booking form.</p>
-          </div>
-          <div class="step">
-            <h3>Get a clear quote</h3>
-            <p>We reply with the right vehicle, a practical itinerary and a transparent all-in estimate.</p>
-          </div>
-          <div class="step">
-            <h3>Confirm and travel</h3>
-            <p>Driver and vehicle details are shared before pickup. Pay simply — no hidden charges.</p>
-          </div>
         </div>
       </section>
 
       <section class="cta-band">
-        <p class="eyebrow reveal">Custom trips welcome</p>
-        <h2 class="reveal">Don't see your route? We'll build it.</h2>
+        <p class="eyebrow reveal" style="color: var(--gold)">Custom trips welcome</p>
+        <h2 class="reveal">Don't See Your Route? We'll Build It.</h2>
         <p class="reveal">Any South India route, any group size — send your plan and we'll shape a package around it.</p>
         <div class="hero-actions reveal">
           <a class="button whatsapp" target="_blank" rel="noopener"
             href="https://wa.me/919487411599?text=Hello%20CPGS!%20I%20want%20a%20custom%20tour%20package.%20Here%27s%20my%20plan%3A"
           >Chat on WhatsApp</a>
-          <a class="button secondary" href="contact.html">Open booking form</a>
+          <a class="button secondary" href="contact.html#booking">Open Booking Form</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a class="brand" href="index.html">
-            <span class="brand-mark">C</span>
-            <span>
-              <strong>CPGS</strong>
-              <small>Tours &amp; Travels</small>
-            </span>
-          </a>
-          <p>
-            Local rides, tour packages, airport transfers, and group travel across Tamil Nadu,
-            Kerala and South India.
-          </p>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="index.html">
+              <span class="brand-mark">C</span>
+              <span>
+                <strong>CPGS</strong>
+                <small>Tours &amp; Travels</small>
+              </span>
+            </a>
+            <p>
+              Local rides, tour packages, airport transfers, and group travel across Tamil Nadu,
+              Kerala and South India.
+            </p>
+            <div class="footer-social">
+              <a href="https://wa.me/919487411599" target="_blank" rel="noopener" aria-label="WhatsApp">
+                <svg viewBox="0 0 32 32" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M16 3.2C8.94 3.2 3.2 8.94 3.2 16c0 2.26.59 4.46 1.71 6.4L3.2 28.8l6.59-1.73A12.74 12.74 0 0 0 16 28.65c7.06 0 12.8-5.74 12.8-12.8S23.06 3.2 16 3.2z"/></svg>
+              </a>
+              <a href="tel:+919487411599" aria-label="Call CPGS">📞</a>
+              <a href="mailto:cpgstoursandtravels24@gmail.com" aria-label="Email CPGS">✉️</a>
+            </div>
+          </div>
+          <div>
+            <h3>Quick links</h3>
+            <ul>
+              <li><a href="packages.html">Tour Packages</a></li>
+              <li><a href="destinations.html">Destinations</a></li>
+              <li><a href="fleet.html">Fleet &amp; Tariff</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact &amp; Booking</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Popular trips</h3>
+            <ul>
+              <li><a href="#temple">Temple tour packages</a></li>
+              <li><a href="#hills">Kodaikanal &amp; Ooty trips</a></li>
+              <li><a href="#kerala">Kerala backwaters tour</a></li>
+              <li><a href="#daily">Airport transfers</a></li>
+              <li><a href="#daily">Corporate travel</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Contact</h3>
+            <ul>
+              <li><a href="tel:+919487411599">+91 94874 11599</a></li>
+              <li><a href="tel:+919486365972">+91 94863 65972</a></li>
+              <li><a href="tel:+919443425972">+91 94434 25972</a></li>
+              <li><a href="mailto:cpgstoursandtravels24@gmail.com">cpgstoursandtravels24@gmail.com</a></li>
+              <li><a href="https://wa.me/919487411599" target="_blank" rel="noopener">WhatsApp us</a></li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <h3>Quick links</h3>
-          <ul>
-            <li><a href="packages.html">Tour Packages</a></li>
-            <li><a href="destinations.html">Destinations</a></li>
-            <li><a href="fleet.html">Fleet &amp; Tariff</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact &amp; Booking</a></li>
-          </ul>
+        <div class="footer-bottom">
+          <p>© 2026 CPGS Tours &amp; Travels. All rights reserved.</p>
+          <p>Comfortable travel across South India · Cash / UPI / GPay accepted</p>
         </div>
-        <div>
-          <h3>Popular trips</h3>
-          <ul>
-            <li><a href="packages.html">Temple tour packages</a></li>
-            <li><a href="packages.html">Kodaikanal &amp; Ooty trips</a></li>
-            <li><a href="packages.html">Kerala backwaters tour</a></li>
-            <li><a href="packages.html">Airport transfers</a></li>
-            <li><a href="packages.html">Corporate travel</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Contact</h3>
-          <ul>
-            <li><a href="tel:+919487411599">+91 94874 11599</a></li>
-            <li><a href="tel:+919486365972">+91 94863 65972</a></li>
-            <li><a href="tel:+919443425972">+91 94434 25972</a></li>
-            <li><a href="mailto:cpgstoursandtravels24@gmail.com">cpgstoursandtravels24@gmail.com</a></li>
-            <li><a href="https://wa.me/919487411599" target="_blank" rel="noopener">WhatsApp us</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 CPGS Tours &amp; Travels. All rights reserved.</p>
-        <p>Comfortable travel across South India.</p>
       </div>
     </footer>
 
