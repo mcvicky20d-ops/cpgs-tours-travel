@@ -174,16 +174,21 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.25rem); font-weight: 700; }
   min-width: 0;
 }
 
-.brand-mark {
-  display: grid;
-  width: 46px;
-  height: 46px;
-  place-items: center;
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  transition: transform 250ms ease;
+}
+
+.brand:hover .brand-logo {
+  transform: rotate(-8deg) scale(1.06);
+}
+
+.footer-brand .brand-logo {
+  background: #fff;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--green), var(--green-dark));
-  color: var(--gold);
-  font-weight: 800;
-  font-size: 1.2rem;
+  padding: 3px;
 }
 
 .brand strong,
@@ -488,6 +493,7 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.25rem); font-weight: 700; }
 .button {
   display: inline-flex;
   min-height: 46px;
+  white-space: nowrap;
   align-items: center;
   justify-content: center;
   gap: 9px;
@@ -762,12 +768,21 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.25rem); font-weight: 700; }
 
 .tour-foot {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  gap: 10px;
   margin-top: auto;
   padding-top: 14px;
   border-top: 1px dashed var(--line);
+}
+
+.tour-foot .tour-pricing {
+  flex: 1 1 100%;
+}
+
+.tour-foot .button {
+  flex: 1 1 0;
+  min-width: max-content;
 }
 
 .tour-pricing {
@@ -1770,11 +1785,155 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.25rem); font-weight: 700; }
   }
 
   .tour-foot .button {
+    flex: 0 0 auto;
     width: 100%;
   }
 
   .whatsapp-float {
     right: 16px;
     bottom: 16px;
+  }
+}
+
+
+/* ---------- Plan-Book-Travel band ---------- */
+
+.easy-band {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(56px, 8vw, 92px) 0;
+  background:
+    linear-gradient(180deg, rgba(6, 40, 33, 0.92), rgba(7, 51, 42, 0.9)),
+    url("https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1800&q=80") center/cover fixed;
+  color: #fff;
+  text-align: center;
+}
+
+.easy-band .eyebrow {
+  color: var(--gold);
+}
+
+.easy-band h2 {
+  max-width: 760px;
+  margin: 6px auto 14px;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(1.7rem, 4vw, 2.9rem);
+}
+
+.easy-band > .container > p {
+  max-width: 640px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.98rem;
+}
+
+.easy-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 22px 14px;
+  margin-top: clamp(32px, 5vw, 48px);
+}
+
+.easy-item {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+.easy-item .icon {
+  display: grid;
+  width: 62px;
+  height: 62px;
+  place-items: center;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 1.6rem;
+  transition: transform 250ms ease, background 250ms ease, border-color 250ms ease;
+}
+
+.easy-item:hover .icon {
+  transform: translateY(-6px) scale(1.08);
+  background: rgba(245, 166, 35, 0.2);
+  border-color: var(--gold);
+}
+
+.easy-item strong {
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+/* ---------- Map embed ---------- */
+
+.map-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  height: clamp(300px, 45vw, 440px);
+}
+
+.map-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.map-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.map-meta p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* ---------- Nav density on medium screens ---------- */
+
+@media (max-width: 1180px) and (min-width: 921px) {
+  .main-nav {
+    font-size: 0.85rem;
+    gap: 2px;
+  }
+
+  .main-nav > a,
+  .nav-item > a {
+    padding: 8px 9px;
+  }
+
+  .main-nav .nav-cta {
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .easy-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .easy-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .easy-band {
+    background-attachment: scroll;
+  }
+
+  .map-wrap {
+    height: 320px;
   }
 }

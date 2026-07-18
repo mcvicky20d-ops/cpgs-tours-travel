@@ -29,7 +29,8 @@
     <link rel="preconnect" href="https://images.unsplash.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2730%27 fill=%27%230f6b57%27/%3E%3Ctext x=%2732%27 y=%2744%27 font-size=%2736%27 font-family=%27Arial%27 font-weight=%27bold%27 fill=%27%23e0a935%27 text-anchor=%27middle%27%3EC%3C/text%3E%3C/svg%3E" />
+    <link rel="icon" type="image/svg+xml" href="assets/cpgs-logo.svg" />
+    <link rel="apple-touch-icon" href="assets/cpgs-logo.svg" />
     <link rel="stylesheet" href="styles.css" />
 
     <script type="application/ld+json">
@@ -43,7 +44,10 @@
       "telephone": "+91-94874-11599",
       "email": "cpgstoursandtravels24@gmail.com",
       "priceRange": "₹₹",
-      "sameAs": ["https://share.google/wZMMHfJoJIlavM5tZ"],
+      "sameAs": ["https://share.google/wZMMHfJoJIlavM5tZ", "https://www.google.com/maps/place/CPGS+Tours+And+Travels/@11.9433356,79.4955884,17z"],
+      "hasMap": "https://www.google.com/maps/place/CPGS+Tours+And+Travels/@11.9433356,79.4955884,17z",
+      "address": { "@type": "PostalAddress", "addressLocality": "Villupuram", "addressRegion": "Tamil Nadu", "addressCountry": "IN" },
+      "geo": { "@type": "GeoCoordinates", "latitude": 11.9433356, "longitude": 79.4955884 },
       "areaServed": [
         { "@type": "Country", "name": "India" },
         { "@type": "Country", "name": "Malaysia" },
@@ -84,7 +88,7 @@
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html" aria-label="CPGS Tours and Travels home">
-          <span class="brand-mark">C</span>
+          <img class="brand-logo" src="assets/cpgs-logo.svg" alt="CPGS Tours and Travels logo" width="48" height="48" />
           <span>
             <strong>CPGS</strong>
             <small>Tours &amp; Travels</small>
@@ -133,11 +137,11 @@
 
         <div class="container hero-grid">
           <div class="hero-copy-wrap">
-            <p class="eyebrow">Holidays across India &amp; abroad</p>
-            <h1>Explore India &amp; Beyond With CPGS</h1>
+            <p class="eyebrow">Plan · Book · Travel — it's that easy</p>
+            <h1>Explore India &amp; Beyond</h1>
             <p>
-              Manali to Munnar, Goa to Kashmir, Chardham Yatra to Bali — fixed per-person
-              packages planned end to end with comfortable stays, easy travel and honest pricing.
+              Holiday packages from ₹5,999 per person — hills, beaches, yatra, Malaysia &amp; Bali.
+              We plan, you travel.
             </p>
             <div class="hero-badges">
               <span>✔ 5000+ happy travellers</span>
@@ -195,6 +199,22 @@
           <span>Rajasthan</span><span>Chardham</span><span>Malaysia</span><span>Bali</span>
         </div>
       </div>
+
+      <section class="easy-band" aria-label="Why booking with CPGS is easy">
+        <div class="container">
+          <p class="eyebrow reveal">Easy travels begin here</p>
+          <h2 class="reveal">“Plan, Book, Travel — It Is That Easy!”</h2>
+          <p class="reveal">With CPGS Tours &amp; Travels, planning your next adventure is simple and hassle-free. Just plan, book and travel — we take care of the rest!</p>
+          <div class="easy-grid" data-stagger>
+            <div class="easy-item"><span class="icon">🏨</span><strong>Hotel Tie-Ups</strong></div>
+            <div class="easy-item"><span class="icon">✈️</span><strong>International Trips</strong></div>
+            <div class="easy-item"><span class="icon">🗺️</span><strong>40+ Destinations</strong></div>
+            <div class="easy-item"><span class="icon">🧳</span><strong>Travel Assistance</strong></div>
+            <div class="easy-item"><span class="icon">🎟️</span><strong>Exclusive Deals</strong></div>
+            <div class="easy-item"><span class="icon">📞</span><strong>24/7 Support</strong></div>
+          </div>
+        </div>
+      </section>
 
       <section class="section" aria-label="Popular tour packages">
         <div class="container">
@@ -519,7 +539,7 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <a class="brand" href="index.html">
-              <span class="brand-mark">C</span>
+              <img class="brand-logo" src="assets/cpgs-logo.svg" alt="CPGS Tours and Travels logo" width="48" height="48" />
               <span>
                 <strong>CPGS</strong>
                 <small>Tours &amp; Travels</small>
