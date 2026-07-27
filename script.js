@@ -172,3 +172,25 @@ document.querySelectorAll("[data-wa-form]").forEach((form) => {
     form.reset();
   });
 });
+
+
+/* ---------- FAQ tabs ---------- */
+
+document.querySelectorAll("[data-faq-tabs]").forEach((wrap) => {
+  const tabs = [...wrap.querySelectorAll("[data-faq-tab]")];
+  const panels = [...wrap.querySelectorAll("[data-faq-panel]")];
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const key = tab.getAttribute("data-faq-tab");
+      tabs.forEach((t) => t.classList.toggle("is-active", t === tab));
+      panels.forEach((p) => p.classList.toggle("is-active", p.getAttribute("data-faq-panel") === key));
+    });
+  });
+
+  // open a tab from URL hash (#wdt-tabs-0 style or #passport/#group/#honeymoon)
+  const hash = location.hash.replace("#", "");
+  const map = { "wdt-tabs-0": "passport", "wdt-tabs-1": "group", "wdt-tabs-2": "honeymoon" };
+  const target = map[hash] || hash;
+  const match = tabs.find((t) => t.getAttribute("data-faq-tab") === target);
+  if (match) match.click();
+});
