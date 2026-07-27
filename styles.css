@@ -1937,3 +1937,257 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.25rem); font-weight: 700; }
     height: 320px;
   }
 }
+
+
+/* ============ TRAVEL ANIMATION LAYER ============ */
+
+/* Flying plane + clouds over the hero */
+
+.fly-scene {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.fly-plane {
+  position: absolute;
+  top: 16%;
+  left: 0;
+  width: 54px;
+  height: 54px;
+  color: rgba(255, 255, 255, 0.95);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
+  animation: flyAcross 17s linear infinite;
+}
+
+.fly-plane::after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  right: 90%;
+  width: 140px;
+  height: 2px;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.75), transparent);
+  border-radius: 2px;
+}
+
+@keyframes flyAcross {
+  0%   { transform: translate(-18vw, 30px) rotate(6deg); }
+  45%  { transform: translate(48vw, -24px) rotate(-2deg); }
+  100% { transform: translate(118vw, 12px) rotate(6deg); }
+}
+
+.cloud {
+  position: absolute;
+  width: 180px;
+  height: 54px;
+  border-radius: 60px;
+  background: rgba(255, 255, 255, 0.16);
+  filter: blur(2px);
+  animation: cloudDrift 70s linear infinite;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.cloud::before { width: 80px; height: 80px; top: -34px; left: 28px; }
+.cloud::after  { width: 56px; height: 56px; top: -22px; right: 30px; }
+
+.cloud.c1 { top: 12%; animation-duration: 75s; }
+.cloud.c2 { top: 58%; transform: scale(0.6); animation-duration: 95s; animation-delay: -40s; opacity: 0.7; }
+
+@keyframes cloudDrift {
+  from { left: -240px; }
+  to   { left: 110%; }
+}
+
+/* Wave section dividers */
+
+.wave-divider {
+  display: block;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: clamp(34px, 5vw, 64px);
+  margin-bottom: -1px;
+}
+
+.hero-slider .wave-divider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+}
+
+/* Boarding-pass enquiry card */
+
+.enquiry-card.boarding-pass {
+  padding: 0;
+  gap: 0;
+  animation: passIn 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 250ms;
+}
+
+@keyframes passIn {
+  from { opacity: 0; transform: translateY(34px) rotate(1.5deg); }
+  to   { opacity: 1; transform: none; }
+}
+
+.pass-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 22px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pass-head .route {
+  color: var(--gold);
+}
+
+.pass-body {
+  display: grid;
+  gap: 12px;
+  padding: 18px 22px 8px;
+}
+
+.pass-cut {
+  position: relative;
+  margin: 12px 0 0;
+  border-top: 2px dashed var(--line);
+}
+
+.pass-cut::before,
+.pass-cut::after {
+  content: "";
+  position: absolute;
+  top: -11px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--green-deep);
+  opacity: 0.55;
+}
+
+.pass-cut::before { left: -11px; }
+.pass-cut::after  { right: -11px; }
+
+.pass-barcode {
+  height: 30px;
+  margin: 12px 22px 18px;
+  border-radius: 3px;
+  opacity: 0.75;
+  background: repeating-linear-gradient(90deg,
+    var(--ink) 0 2px, transparent 2px 5px,
+    var(--ink) 5px 6px, transparent 6px 11px,
+    var(--ink) 11px 14px, transparent 14px 17px);
+}
+
+/* Flight-path divider under headings */
+
+.flight-path {
+  position: relative;
+  width: min(230px, 62%);
+  height: 22px;
+  margin: 12px auto 0;
+  border-top: 2px dashed rgba(15, 107, 87, 0.35);
+}
+
+.section-heading.left .flight-path,
+.heading-row .flight-path {
+  margin-inline: 0;
+}
+
+.fp-plane {
+  position: absolute;
+  top: -14px;
+  left: 0;
+  font-size: 1.05rem;
+  animation: fpFly 4.5s ease-in-out infinite alternate;
+}
+
+@keyframes fpFly {
+  from { left: 0; }
+  to   { left: calc(100% - 20px); }
+}
+
+/* Floating balloon */
+
+.balloon {
+  position: absolute;
+  right: clamp(16px, 8vw, 120px);
+  bottom: 18%;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+  animation: balloonFloat 6s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes balloonFloat {
+  from { transform: translateY(0) rotate(-4deg); }
+  to   { transform: translateY(-26px) rotate(5deg); }
+}
+
+/* Image shine sweep on card hover */
+
+.tour-media::after,
+.destination-card > img + * {
+  pointer-events: none;
+}
+
+.tour-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.35) 50%, transparent 60%);
+  transform: translateX(-130%);
+  transition: transform 700ms ease;
+  pointer-events: none;
+}
+
+.tour-card:hover .tour-media::before {
+  transform: translateX(130%);
+}
+
+/* Hero copy entrance */
+
+.hero-copy-wrap > * {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: rise 850ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-copy-wrap > *:nth-child(2) { animation-delay: 120ms; }
+.hero-copy-wrap > *:nth-child(3) { animation-delay: 240ms; }
+.hero-copy-wrap > *:nth-child(4) { animation-delay: 360ms; }
+.hero-copy-wrap > *:nth-child(5) { animation-delay: 480ms; }
+
+@keyframes rise {
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fly-plane, .cloud, .fp-plane, .balloon { animation: none !important; }
+  .fly-plane { display: none; }
+  .enquiry-card.boarding-pass, .hero-copy-wrap > * {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+  .tour-media::before { display: none; }
+}
