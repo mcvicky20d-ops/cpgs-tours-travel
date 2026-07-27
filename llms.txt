@@ -40,5 +40,6 @@ Packages include hotel stay, daily breakfast, sightseeing cab/transfers and trip
 - Tour Packages: https://cpgstoursandtravels.in/packages
 - Destinations: https://cpgstoursandtravels.in/destinations
 - Chardham Yatra: https://cpgstoursandtravels.in/chardham-yatra-package
+- Passport & Visa assistance: https://cpgstoursandtravels.in/passport-visa
 - Blog: https://cpgstoursandtravels.in/blog
 - Contact & booking: https://cpgstoursandtravels.in/contact
