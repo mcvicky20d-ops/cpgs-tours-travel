@@ -2168,3 +2168,59 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.25rem); font-weight: 700; }
   }
   .tour-media::before { display: none; }
 }
+
+
+/* ---------- FAQ tabs ---------- */
+
+.faq-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 26px;
+  justify-content: center;
+}
+
+.faq-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--green-dark);
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.faq-tab:hover {
+  transform: translateY(-2px);
+}
+
+.faq-tab.is-active {
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 8px 20px rgba(15, 107, 87, 0.28);
+}
+
+.faq-panel {
+  display: none;
+  animation: fadeUp 380ms ease both;
+}
+
+.faq-panel.is-active {
+  display: block;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-panel { animation: none; }
+}
