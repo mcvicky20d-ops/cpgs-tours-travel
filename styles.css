@@ -2097,14 +2097,15 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.25rem); font-weight: 700; }
     var(--ink) 11px 14px, transparent 14px 17px);
 }
 
-/* Flight-path divider under headings */
+/* Section-heading divider — static, no movement */
 
 .flight-path {
   position: relative;
-  width: min(230px, 62%);
-  height: 22px;
-  margin: 12px auto 0;
-  border-top: 2px dashed rgba(15, 107, 87, 0.35);
+  width: 84px;
+  height: 8px;
+  margin: 14px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--gold), var(--coral));
 }
 
 .section-heading.left .flight-path,
@@ -2112,34 +2113,10 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.25rem); font-weight: 700; }
   margin-inline: 0;
 }
 
-.fp-plane {
-  position: absolute;
-  top: -14px;
-  left: 0;
-  font-size: 1.05rem;
-  animation: fpFly 4.5s ease-in-out infinite alternate;
-}
-
-@keyframes fpFly {
-  from { left: 0; }
-  to   { left: calc(100% - 20px); }
-}
-
-/* Floating balloon */
-
+/* legacy decorative plane inside dividers — hidden (no moving icon) */
+.fp-plane,
 .balloon {
-  position: absolute;
-  right: clamp(16px, 8vw, 120px);
-  bottom: 18%;
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
-  animation: balloonFloat 6s ease-in-out infinite alternate;
-  pointer-events: none;
-}
-
-@keyframes balloonFloat {
-  from { transform: translateY(0) rotate(-4deg); }
-  to   { transform: translateY(-26px) rotate(5deg); }
+  display: none !important;
 }
 
 /* Image shine sweep on card hover */
