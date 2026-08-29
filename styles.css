@@ -2224,3 +2224,15 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.25rem); font-weight: 700; }
 @media (prefers-reduced-motion: reduce) {
   .faq-panel { animation: none; }
 }
+
+
+.footer-credit a {
+  color: var(--gold);
+  font-weight: 600;
+  transition: color 150ms ease;
+}
+
+.footer-credit a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
